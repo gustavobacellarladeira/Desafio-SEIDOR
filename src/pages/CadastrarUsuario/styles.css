@@ -1,0 +1,24 @@
+.form--container {
+  padding: 50px;
+  text-align: center;
+}
+
+.form--container h1 {
+  margin-bottom: 50px;
+}
+.form--container > form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+}
+.btn-submit--container {
+  padding: 20px;
+}
+.btn-submit--container > button {
+  padding: 10px;
+}
+.input-submit {
+  padding: 10px;
+  margin: 10px;
+}

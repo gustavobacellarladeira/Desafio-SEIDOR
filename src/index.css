@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+.title--container {
+  background-color: #343a40;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
