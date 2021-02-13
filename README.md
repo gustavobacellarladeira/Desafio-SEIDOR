@@ -15,6 +15,9 @@ O que eu achei do desafio?
 <p>
 Alem de redux, foi usado React, React-router, Bootstrap.
 Foi feita uma versão em typescript e javaScript, mas como tenho melhor domínio em javaScript, optei por ele.
+
+Um extra foi um backend em node.js com express e mongoDB
+
 </p>
 
 <p>
