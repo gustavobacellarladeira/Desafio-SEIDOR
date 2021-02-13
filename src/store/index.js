@@ -73,7 +73,7 @@ function usuarios(state = INITIAL_STATE, action) {
       // checando parar ver se existe
       const indexDelete = cloneDelete.findIndex((obj) => obj.id === id);
       // nao deixar exluir tudo, e sim apenas o selecionado
-      if (indexDelete ==! -1)
+      if (indexDelete !== -1)
         cloneDelete.splice(indexDelete, 1)
       console.log(cloneDelete)
       console.log(indexDelete)
