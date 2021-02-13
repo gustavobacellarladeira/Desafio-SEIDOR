@@ -9,11 +9,16 @@
 
 O que eu achei do desafio?
 <br>
-É um ótimo desáfio de frontend, pois me trouxe mais perto do redux, o qual não tinha conheimento,
+É um ótimo desáfio de frontend, pois me trouxe mais perto do redux, o qual não tinha conheimento, e também perdi um dia em um Bug chato que me apareceu... Porém resolvi e isso me deixa muito feliz, pois faz parte da programação.
 
 </p>
 <p>
-Alem d e redux, foi usado React, React-router, Bootstrap
+Alem de redux, foi usado React, React-router, Bootstrap.
+Foi feita uma versão em typescript e javaScript, mas como tenho melhor domínio em javaScript, optei por ele.
+</p>
+
+<p>
+Espero que gostem do que eu fiz em 2 dias, sei que não está a coisa mais perfeita do mundo, porem está feito! E sempre estou evoluindo e sempre estarei, por causa de desafios como esse, e também do dia a dia, me fazem evoluir pois programo por amor, trabalho no que gosto e isso é o melhor de tudo.
 </p>
 
 <br>
@@ -21,22 +26,34 @@ Alem d e redux, foi usado React, React-router, Bootstrap
 
 ## 🚀 Demo
 
-Just dowload and run the following command at the root:
+<Br>
+
+Live: [ Vercel 🚀](https://interligado.vercel.app/)
+
+<p>
+Obs: Esta responsivo, você pode ver pelo celular se preferir!</p>
+
+<br>
+
+Local:<br>
+Faça clone ou o dowload do repositorio e na pasta do repositorio digite:
 
 ```sh
 npm install
-```
 
-Or:
+ou
 
-```sh
 yarn install
 ```
 
-After the dowload complete run:
+Depois do dowload estar completo digite:
 
 ```sh
-yarn start |or| npm start
+yarn install
+
+ou
+
+yarn start
 ```
 
 <br>
