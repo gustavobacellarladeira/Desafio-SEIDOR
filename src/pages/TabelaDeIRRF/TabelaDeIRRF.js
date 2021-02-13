@@ -165,7 +165,7 @@ const TabelaDeIRRF = () => {
             </tbody>
           </Table>
         </div>
-        <Modal show={showModalDelete} onHide={() => setShowModalDelete(false)}>
+        {Usuarios[IndexPopUp] && <Modal show={showModalDelete} onHide={() => setShowModalDelete(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Deletar funcionario {Usuarios[IndexPopUp].nome}</Modal.Title>
           </Modal.Header>
@@ -178,7 +178,7 @@ const TabelaDeIRRF = () => {
               Confirmar
           </Button>
           </Modal.Footer>
-        </Modal>
+        </Modal>}
 
         {/* INICIO MODAL */}
         {Usuarios[IndexPopUp] && <Modal
