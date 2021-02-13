@@ -31,7 +31,7 @@ Espero que gostem do que eu fiz em 2 dias, sei que não está a coisa mais perfe
 
 <Br>
 
-Live: [ Vercel 🚀](https://interligado.vercel.app/)
+Live: [ Vercel 🚀](https://desafio-seidor.vercel.app/CadastroDeUsuario)
 
 <p>
 Obs: Esta responsivo, você pode ver pelo celular se preferir!</p>
