@@ -1,47 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-import './styles.css';
-
-type form = {
-  nome: string;
-  cpf: number;
-  salario: number;
-  desconto: number;
-  dependentes: number;
-};
+import './style.css';
 
 const CadastrarUsuario = () => {
+  const dispatch = useDispatch()
+  const history = useHistory();
+
   // formulario com react-hook-form
-  const { register, handleSubmit, errors } = useForm<form>();
+  const { register, handleSubmit, errors } = useForm();
 
-  const [state, setState] = useState<any>([]);
+  // gera um id unico
+  const generateID = () => {
+    const id = '_' + Math.random().toString(36).substr(3, 9);
+    console.log(id)
+    return id
+  };
 
-  const onSubmit = handleSubmit(data => {
+  const onSubmit = handleSubmit(async (data) => {
     const irpf = DescontoIRPF(
       SalarioBaseIR(data.salario, data.desconto, data.dependentes)
     );
-    const funcionario = [
-      {
-        nome: data.nome,
-        cpf: data.cpf,
-        salario: data.salario,
-        desconto: data.desconto,
-        dependentes: data.dependentes,
-        irpf: irpf
-      }
-    ];
-
-    setState([...state, ...funcionario]);
-    console.log(state);
+    const funcionario =
+    {
+      id: generateID(),
+      nome: data.nome,
+      cpf: data.cpf,
+      salario: data.salario,
+      desconto: data.desconto,
+      dependentes: data.dependentes,
+      irpf: irpf
+    }
+    dispatch({ type: 'ADD_FUNCIONARIO', form: funcionario })
+    history.push("/TabelaDeIRRF");
   });
 
   // Calcula o salario Base IR
   const SalarioBaseIR = (
-    SalarioBruto: number,
-    DescontoPrevidencia: number,
-    QuantidadeDeDependente: number
+    SalarioBruto,
+    DescontoPrevidencia,
+    QuantidadeDeDependente
   ) => {
     const DeducaoPorDependente = 164.56;
     let SalarioBaseIR =
@@ -50,9 +51,8 @@ const CadastrarUsuario = () => {
       DeducaoPorDependente * QuantidadeDeDependente;
     return SalarioBaseIR;
   };
-
   // Calcula o Desconto IRPF
-  const DescontoIRPF = (SalarioBaseIR: number) => {
+  const DescontoIRPF = (SalarioBaseIR) => {
     // Inicio Calculo da aliquota e Parcela a deduzir do IRPF //
     let aliquota = 0;
     let ParcelaADeduzirDoIRPF = 0;
@@ -88,9 +88,10 @@ const CadastrarUsuario = () => {
   };
 
   return (
+
     <section>
       <div className="title--container">
-        <h1>Cadastro de Usuário</h1>
+        <h3>Cadastro de Usuário</h3>
       </div>
       <div className="form--container">
         <form onSubmit={onSubmit}>
@@ -161,6 +162,7 @@ const CadastrarUsuario = () => {
             </Button>
           </div>
         </form>
+
       </div>
     </section>
   );

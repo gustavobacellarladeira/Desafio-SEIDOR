@@ -4,7 +4,7 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import TabelaDeIRRF from '../pages/TabelaDeIRRF/TabelaDeIRRF';
 import CadastroDeUsuario from '../pages/CadastrarUsuario/CadastrarUsuario';
-import Editar from '../pages/Editar/Editar';
+
 
 const index = () => {
   return (
@@ -15,10 +15,6 @@ const index = () => {
       <Route path="/CadastroDeUsuario">
         <CadastroDeUsuario />
       </Route>
-      <Route path="/Editar">
-        <Editar />
-      </Route>
-
       <Route path="/">
         <Home />
       </Route>

@@ -8,7 +8,7 @@ const NavBar = () => {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Nav.Link>
         <Link className="logo--container" to="/">
-          Desasfio SEIDOR
+          DESAFIO SEIDOR
         </Link>
       </Nav.Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -25,11 +25,7 @@ const NavBar = () => {
               <Button variant="outline-light">Tabela</Button>
             </Link>
           </Nav.Link>
-          <Nav.Link>
-            <Link to="/Editar">
-              <Button variant="outline-warning">Editar</Button>{' '}
-            </Link>
-          </Nav.Link>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -37,14 +33,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-// <header className="header--container">
-//   <nav className="nav--container">
-//     <div className="nav-links--container">
-//       <Link to="/">Home</Link>
-
-//       <Link to="/CadastroDeUsuario">Cadastrar Usuario</Link>
-
-//       <Link to="/TabelaDeIRRF">Tabela</Link>
-//     </div>
-//   </nav>
-// </header>

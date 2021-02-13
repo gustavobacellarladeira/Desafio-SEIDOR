@@ -7,3 +7,10 @@
 .home-about > h2 {
   margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 600px) {
+  .home-about {
+    padding: 20px;
+    text-align: justify;
+  }
+}
